@@ -1,2 +1,3 @@
-hello say hello
-hello say hello {names|name}
+LatestXkcd {Zeige|Sende|} {mir|} den {neuesten|aktuellen} Comic {an|}
+NumberXkcd {Zeige|Sende|} {mir|} den Comic {mit der|} {Nummer|} {-|num} {an|anzeigen|}
+RandomXkcd {Zeige|Sende|} {mir|} {einen|einem} zufälligen Comic {an|anzeigen|}

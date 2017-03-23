@@ -1,3 +1,3 @@
-import Alexaxkcdskill from './alexa-xkcd-skill';
+import AlexaXkcdSkill from './alexa-xkcd-skill';
 
-module.exports = Alexaxkcdskill;
+module.exports = AlexaXkcdSkill;
