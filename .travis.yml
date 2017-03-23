@@ -2,11 +2,8 @@ sudo: false
 language: node_js
 node_js:
   - 'stable'
-  - '4.3.2'
 
 deploy:
   provider: script
   script: npm run deploy
-  branches:
-    only:
-      - master
+  on: master
