@@ -4,18 +4,16 @@
     { "intent": "AMAZON.HelpIntent" },
     { "intent": "AMAZON.StopIntent" },
     {
-      "intent": "LatestXkcd",
-      "slots": []
+      "intent": "LatestXkcd"
     },
     {
       "intent": "NumberXkcd",
       "slots": [
-        { "name": "num", "type": "NUMBER" }
+        { "name": "num", "type": "AMAZON.NUMBER" }
       ]
     },
     {
-      "intent": "RandomXkcd",
-      "slots": []
+      "intent": "RandomXkcd"
     }
   ]
 }
