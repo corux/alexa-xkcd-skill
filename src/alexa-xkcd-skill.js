@@ -1,6 +1,5 @@
 import { Skill, Launch, Intent, SessionEnded } from 'alexa-annotations';
 import { say, ask } from 'alexa-response';
-import ssml from 'alexa-ssml-jsx';
 import request from 'request-promise-native';
 
 @Skill
@@ -42,7 +41,7 @@ export default class AlexaXkcdSkill {
 
   _createResponse(result) {
     const date = `${result.day}.${result.month}.${result.year}`;
-    const image = `https://crossorigin.me/${result.img}`;
+    const image = `https://gobetween.oklabs.org/pipe/${result.img}`;
     return ask(`Der Comic vom ${date} wurde an deine Alexa App gesendet. Was möchtest du als nächstes tun?`).card({
       title: `xkcd ${result.num} vom ${date}`,
       type: 'Standard',
