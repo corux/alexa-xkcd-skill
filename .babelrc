@@ -3,7 +3,6 @@
   "plugins": [
     "add-module-exports",
     "transform-decorators-legacy",
-    "transform-async-to-generator",
     ["transform-react-jsx", { "pragma": "ssml" }]
   ]
 }
