@@ -7,7 +7,7 @@ export default {
   entry: {
     index: ['babel-polyfill', path('src', 'index.js')]
   },
-  devtool: 'source-map',
+  // devtool: 'source-map',
   target: 'node',
   output: {
     libraryTarget: 'commonjs',
