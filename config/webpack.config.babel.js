@@ -1,26 +1,27 @@
 import Path from 'path';
-import webpack from 'webpack';
+import BabiliPlugin from 'babili-webpack-plugin';
 
 const path = (...parts) => Path.join(__dirname, '..', ...parts);
 
 export default {
-  entry: ['babel-polyfill', path('src', 'index.js')],
+  entry: {
+    index: ['babel-polyfill', path('src', 'index.js')]
+  },
   devtool: 'source-map',
   target: 'node',
   output: {
     libraryTarget: 'commonjs',
     library: 'handler',
-    filename: 'index.js',
+    filename: '[name].js',
     path: path('build')
   },
   module: {
-    loaders: [
+    rules: [
       { test: /\.json$/, loader: 'json-loader' },
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' }
     ]
   },
   plugins: [
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.OccurrenceOrderPlugin(true)
+    new BabiliPlugin()
   ]
 };
