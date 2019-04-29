@@ -1,0 +1,45 @@
+{
+  "manifest": {
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:eu-west-1:347839150037:function:alexa-xkcd-skill-production",
+          "sourceDir": "dist"
+        }
+      }
+    },
+    "manifestVersion": "1.0",
+    "permissions": [],
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "usesPersonalInfo": false,
+      "isChildDirected": false,
+      "isExportCompliant": true,
+      "containsAds": false
+    },
+    "publishingInformation": {
+      "locales": {
+        "de-DE": {
+          "name": "xkcd Comics (inoffiziell)",
+          "smallIconUri": "https://s3-eu-west-1.amazonaws.com/alexa-xkcd-skill/icon108.png",
+          "largeIconUri": "https://s3-eu-west-1.amazonaws.com/alexa-xkcd-skill/icon512.png",
+          "summary": "Dieser Skill dient dazu Comics von xkcd abzurufen und in der Alexa App anzuzeigen.",
+          "description": "Dieser Skill dient dazu Comics von xkcd abzurufen und in der Alexa App anzuzeigen.\n\nBei diesem Skill handelt es sich um ein inoffizielles Fan Projekt.",
+          "examplePhrases": [
+            "Alexa, frage x. k. c. d. Comics nach dem aktuellen Comic",
+            "Alexa, frage x. k. c. d. Comics nach einem zufälligen Comic",
+            "Alexa, frage x. k. c. d. Comics nach dem Comic 1794"
+          ],
+          "keywords": [
+            "xkcd",
+            "comics"
+          ]
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "No special testing required.",
+      "category": "KNOWLEDGE_AND_TRIVIA",
+      "distributionCountries": []
+    }
+  }
+}

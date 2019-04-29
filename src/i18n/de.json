@@ -1,0 +1,13 @@
+{
+  "launch": "Hallo! Mit xkcd Comics kannst du dir Comics an deine Alexa App senden. Was möchtest du als nächstes tun?",
+  "stop": "Bis bald!",
+  "help": {
+    "text": "Mit xkcd Comics kannst du dir Comics an deine Alexa App senden. Was möchtest du als nächstes tun?",
+    "reprompt": "Du kannst z.B. nach dem neuesten Comic fragen. Oder auch nach dem Comic mit einer genauen Nummer."
+  },
+  "response": {
+    "not-found": "Der Comic wurde nicht gefunden. Was möchtest du als nächstes tun?",
+    "speak": "Der Comic vom %s wurde an deine Alexa App gesendet. Was möchtest du als nächstes tun?",
+    "title": "xkcd %s vom %s"
+  }
+}

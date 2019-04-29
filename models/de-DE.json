@@ -1,0 +1,52 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "x. k. c. d. comics",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent"
+        },
+        {
+          "name": "AMAZON.HelpIntent"
+        },
+        {
+          "name": "AMAZON.StopIntent"
+        },
+        {
+          "name": "AMAZON.FallbackIntent"
+        },
+        {
+          "name": "LatestXkcd",
+          "samples": [
+            "Zeige mir den neuesten Comic an",
+            "Zeige den aktuellen Comic an",
+            "dem aktuellen Comic"
+          ]
+        },
+        {
+          "name": "NumberXkcd",
+          "slots": [
+            {
+              "name": "num",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "Zeige mir den Comic mit der Nummer {num} an",
+            "Zeige den Comic {num} an",
+            "den Comic mit der Nummer {num}",
+            "dem Comic {num}"
+          ]
+        },
+        {
+          "name": "RandomXkcd",
+          "samples": [
+            "Zeige mir einen zufälligen Comic an",
+            "Zeige einen zufälligen Comic",
+            "einem zufälligen Comic"
+          ]
+        }
+      ]
+    }
+  }
+}
