@@ -35,7 +35,7 @@
     "typescript": "3.5.3",
     "underscore": "1.9.1",
     "virtual-alexa": "0.7.2",
-    "webpack": "4.36.1",
+    "webpack": "4.38.0",
     "webpack-command": "0.4.2"
   }
 }
