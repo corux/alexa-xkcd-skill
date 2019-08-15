@@ -1,4 +1,4 @@
-import { HandlerInput, ResponseBuilder } from "ask-sdk-core";
+import { IExtendedHandlerInput, IExtendedResponseBuilder } from "@corux/ask-extensions";
 import axios from "axios";
 
 export async function getXkcd(num?: number): Promise<{
@@ -40,9 +40,11 @@ function convertToInt(value: string): number {
   return Number.NaN;
 }
 
-export async function createResponse(handlerInput: HandlerInput, slotValue?: string): Promise<ResponseBuilder> {
-  const t = handlerInput.attributesManager.getRequestAttributes().t;
-  const error = () => handlerInput.responseBuilder
+export async function createResponse(
+  handlerInput: IExtendedHandlerInput,
+  slotValue?: string): Promise<IExtendedResponseBuilder> {
+  const t: any = handlerInput.t;
+  const error = () => handlerInput.getResponseBuilder()
     .speak(t("response.not-found"))
     .reprompt(t("help.reprompt"));
 
@@ -54,7 +56,7 @@ export async function createResponse(handlerInput: HandlerInput, slotValue?: str
     const result = await getXkcd(num);
     const date = `${result.day}.${result.month}.${result.year}`;
     const image = `https://i35kgypfrd.execute-api.eu-west-1.amazonaws.com/production/${result.img}`;
-    return handlerInput.responseBuilder
+    return handlerInput.getResponseBuilder()
       .speak(t("response.speak", date))
       .reprompt(t("help.reprompt"))
       .withStandardCard(t("response.title", result.num, date), result.alt.replace(/[^ -~]+/g, ""), image, image);

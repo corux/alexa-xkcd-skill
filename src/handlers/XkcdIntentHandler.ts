@@ -1,11 +1,11 @@
-import { HandlerInput } from "ask-sdk-core";
+import { BaseRequestHandler, IExtendedHandlerInput, Intents } from "@corux/ask-extensions";
 import { IntentRequest, Response } from "ask-sdk-model";
-import { BaseIntentHandler, createResponse, Intents } from "../utils";
+import { createResponse } from "../utils";
 
 @Intents("LatestXkcd", "NumberXkcd")
-export class XkcdIntentHandler extends BaseIntentHandler {
+export class XkcdIntentHandler extends BaseRequestHandler {
 
-  public async handle(handlerInput: HandlerInput): Promise<Response> {
+  public async handle(handlerInput: IExtendedHandlerInput): Promise<Response> {
     const slot = ((handlerInput.requestEnvelope.request as IntentRequest).intent.slots || {}).num;
 
     return (await createResponse(handlerInput, slot && slot.value))
