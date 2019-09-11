@@ -57,9 +57,11 @@ export async function createResponse(
     const date = `${result.day}.${result.month}.${result.year}`;
     const image = `https://i35kgypfrd.execute-api.eu-west-1.amazonaws.com/production/${result.img}`;
     return handlerInput.getResponseBuilder()
-      .speak(t("response.speak", date))
+      .speak(t("response.speak", { date }))
       .reprompt(t("help.reprompt"))
-      .withStandardCard(t("response.title", result.num, date), result.alt.replace(/[^ -~]+/g, ""), image, image);
+      .withStandardCard(
+        t("response.title", { num: result.num, date }),
+        result.alt.replace(/[^ -~]+/g, ""), image, image);
   } catch (e) {
     return error();
   }

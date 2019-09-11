@@ -7,7 +7,7 @@
   },
   "response": {
     "not-found": "Der Comic wurde nicht gefunden. Was möchtest du als nächstes tun?",
-    "speak": "Der Comic vom %s wurde an deine Alexa App gesendet. Was möchtest du als nächstes tun?",
-    "title": "xkcd %s vom %s"
+    "speak": "Der Comic vom {{date}} wurde an deine Alexa App gesendet. Was möchtest du als nächstes tun?",
+    "title": "xkcd {{num}} vom {{date}}"
   }
 }
